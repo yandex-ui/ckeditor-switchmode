@@ -1,0 +1,32 @@
+{
+  "name": "ckeditor-switchmode",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "ckeditor",
+    "switchmode"
+  ],
+  "main": "plugin.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": {
+    "name": "Rikishi",
+    "email": "bufpost@yandex.ru",
+    "url": "https://github.com/Katochimoto"
+  },
+  "bugs": {
+    "url": "https://github.com/yandex-ui/ckeditor-switchmode/issues",
+    "email": "bufpost@yandex.ru"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/yandex-ui/ckeditor-switchmode.git"
+  },
+  "devDependencies": {
+    "vow": "0.4.10",
+    "lodash": "3.10.1",
+    "ckeditor": "git://github.com/yandex-ui/ckeditor.git"
+  },
+  "license": "MIT"
+}

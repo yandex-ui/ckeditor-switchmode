@@ -35,14 +35,11 @@
         resolve = resolve || function() {};
         reject = reject || function() {};
 
-        var that = this;
-        setTimeout(function() {
-            if (window.confirm(that.lang.switchmode.confirm)) {
-                resolve.call(that);
-            } else {
-                reject.call(that);
-            }
-        }, 0);
+        if (window.confirm(this.lang.switchmode.confirm)) {
+            resolve.call(this);
+        } else {
+            reject.call(this);
+        }
     };
 
     /**
@@ -278,7 +275,7 @@
                     // This is a partial set of Unicode whitespace characters.
                     // \S is the opposite: [^\f\n\r\t\u000B\u0020\u00A0\u2028\u2029].
                     if (/\S/.test(message)) {
-                        confirm = this.config.switchmodeConfirm.bind(this);
+                        confirm = debounce(this.config.switchmodeConfirm.bind(this), 0);
                     }
                 }
             }

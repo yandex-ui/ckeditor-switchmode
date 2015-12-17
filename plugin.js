@@ -78,6 +78,7 @@
             editor.addCommand('switchmode', {
                 modes: { wysiwyg: 1, source: 1 },
                 editorFocus: false,
+                canUndo: false,
                 readOnly: 1,
                 exec: this.onExecSwitchmode.bind(editor)
             });
@@ -165,9 +166,11 @@
             var button = this.ui.get('SwitchMode');
             var title = (isSource ? lang.enable : lang.disable);
 
-            button.setState(buttonState)
-            button.setTitle(title);
-            button.setLabel(title);
+            if (button) {
+                button.setState(buttonState)
+                button.setTitle(title);
+                button.setLabel(title);
+            }
 
             if (isSource) {
                 var editable = this.editable();

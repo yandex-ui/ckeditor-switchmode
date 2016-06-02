@@ -167,7 +167,7 @@
             var title = (isSource ? lang.enable : lang.disable);
 
             if (button) {
-                button.setState(buttonState)
+                button.setState(buttonState);
                 button.setTitle(title);
                 button.setLabel(title);
             }
